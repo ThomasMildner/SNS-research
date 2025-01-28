@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Study">
+    <meta name="Thomas Mildner">
+    <base href="/" />
+    <title>Social Media Interface Study </title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.2/axios.min.js"
+            integrity="sha512-bHeT+z+n8rh9CKrSrbyfbINxu7gsBmSHlDCb3gUF1BjmjDzKhoKspyB71k0CIRBSjE5IVQiMMVBgCWjF60qsvA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+            integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+<!--
+
+<div id="loadingOverlay">
+    <div class="lds-ring">
+        <div></div><div></div><div></div><div></div>
+    </div>
+    <p>Please wait a moment. <br> The study is prepared and content is loaded.</p>
+</div>
+-->
+
+<div id="wrapper">
+    <div id="main-content">
+    <div id="header">
+        <h1>.social_media</h1>
+    </div>
+    <div id="content-wrapper">
+        <div id="home">
+            <div id="task-content">
+                <div id="task-inner">
+                    <p>If you see this text, some of your device's settings block functionalities of this website. A reason for this could be an older browser version, so updating may fix this error. You could also try using a different browser. If neither helps, unfortunately, you cannot participate in this study.</p>
+                </div>
+                <div id="task-inner-buttons">
+                    <button id="task-back" class="content-button">Back</button>
+                    <button id="task-continue" class="content-button">Continue</button>
+                </div>
+                <button id="task-abort" class="content-button">Abort Task</button>
+            </div>
+        </div>
+        <div id="friends">
+            <div class="other-content">
+                <h2>Friends</h2>
+                <hr>
+                <p>Sorry, this feature has not yet been implemented.</p>
+                <p>We only defined tasks that are fully achievable. This means that you can continue looking elsewhere.</p>
+            </div>
+        </div>
+        <div id="profile">
+            <div id="profile-app"></div>
+        </div>
+        <div id="notifications">
+            <div class="other-content">
+                <h2>Notifications</h2>
+                <hr>
+                <p>Sorry, this feature has not yet been implemented.</p>
+                <p>We only defined tasks that are fully achievable. This means that you can continue looking elsewhere.</p>
+            </div>
+        </div>
+        <div id="menu">
+            <div id="menu-content">
+                <div id="menu-app"></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+    <div class="footer">
+        <div class="footer-nav">
+        <div class="footer-nav-col">
+            <img class="footer-nav-button path-node active" id="menu-home" src="img/nav-button-home-active.png">
+<!--            <img class="footer-nav-button path-node" id="menu-home" src="img/nav-button-home.png">-->
+            <p>Home</p>
+        </div>
+        <div class="footer-nav-col">
+<!--            <img class="footer-nav-button path-node" id="menu-friends-active" src="img/nav-button-friends-active.png">-->
+            <img class="footer-nav-button path-node" id="menu-friends" src="img/nav-button-friends.png">
+            <p>Friends</p>
+        </div>
+        <div class="footer-nav-col">
+<!--            <img class="footer-nav-button path-node" id="menu-profile-active" src="img/nav-button-profile-active.png">-->
+            <img class="footer-nav-button path-node" id="menu-profile" src="img/nav-button-profile.png">
+            <p>Profile</p>
+        </div>
+        <div class="footer-nav-col">
+<!--            <img class="footer-nav-button path-node" id="menu-notifications-active" src="img/nav-button-notifications-active.png">-->
+            <img class="footer-nav-button path-node" id="menu-notifications" src="img/nav-button-notifications.png">
+            <p>Notifications</p>
+        </div>
+        <div class="footer-nav-col">
+            <img class="footer-nav-button path-node" id="menu-menu" src="img/nav-button-menu.png">
+            <p>Menu</p>
+        </div>
+    </div>
+    </div>
+</div>
+
+<!--First, load Vue and other modules-->
+<script type="module" src="./js/bottomNavigation.js"></script>
+<script type="module" src="./src/main.js"></script>
+
+<!--Then, load web scripts-->
+<script type="module" src="./js/showTask.js"></script>
+<script type="module" src="./js/deadEnd.js"></script>
+
+<!--Lastly, load the Strapi backend functions-->
+<script type="module" src="./js/updateAndConnectStrapi.js"></script>
+
+<script>
+    let body = document.querySelector("body");
+
+    if (checkMobileBrowser()) {
+        body.innerHTML =
+            `<div style="position: absolute; top: 0; left: 0; height: 100vh; width: 100vw; background: #3C8BFF; color: #ffffff; z-index: 99; overflow: hidden;">
+                <h2 style="position: absolute; top: 0; width: 90vw; height: 100vh; margin-left: 5vw; margin-top: 50%;
+                font-family: Poppins; font-weight: 400; font-size: 4em; overflow: hidden">
+                This study is only eligible on mobile devices, but it seems that you are trying to do it with a desktop browser.
+                Please load this page in a mobile browser instead or contact the stu
+                dy director.</h2>
+            </div>`
+    }
+    if (checkLandscape()) {
+        body.innerHTML =
+            `<div style="position: absolute; top: 0; left: 0; height: 100vh; width: 100vw; background: #3C8BFF; color: #ffffff; z-index: 99; overflow: hidden;">
+                <h2 style="position: absolute; width: 90vw; height: 100vh; margin-left: 5vw;
+                font-family: Poppins; font-weight: 400; font-size: 2em; overflow: hidden">
+                This study is only eligible only in portrait orientation, but it seems that you are trying to do it in landscape mode.
+                Please turn your device and refresh this window or contact the study director.</h2>
+            </div>`
+    }
+
+    function checkMobileBrowser() {
+        let check = false;
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+            //console.log("is mobile: " + check);
+            return check;
+        }
+        //console.log("is mobile: " + check);
+        return check;
+    }
+
+    function checkLandscape() {
+        let check = false;
+        if (window.innerHeight < window.innerWidth) {
+            //console.log("is landscape: " + check);
+            check = true;
+        }
+        //console.log("is landscape: " + check);
+        return check;
+    }
+</script>
+<noscript>
+    <div class="no-js">
+        <p>You either disabled loading JavaScript or your browser does not support it! Unfortunately, this is required to take part in this study.</p>
+        <p>To still take part, enable JavaScript and reload this page, or use a browser that supports JavaScript.</p>
+    </div>
+</noscript>
+</body>
+</html>

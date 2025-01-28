@@ -1,0 +1,42 @@
+#menu-content{
+    height: 100%;
+}
+
+.menu-frame-wrapper {
+    position: absolute;
+    top:0;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    margin: 0 auto;
+    background: #ffffff;
+    overflow-y: scroll;
+}
+
+#menu-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 10vh;
+    align-content: end;
+    border-bottom: 3px solid #3c8bff;
+}
+
+#menu-header img {
+    height: 4em;
+}
+
+.menu-frame-buffer {
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+}
+
+.back-arrow {
+    rotate: 180deg;
+    height: 3vh;
+}
+
+.item-wrapper{
+    width: 95%;
+    margin: 0 auto 2vw;
+    display: grid;
+}

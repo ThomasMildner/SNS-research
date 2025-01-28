@@ -1,0 +1,417 @@
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    width: 100vw;
+    font-family: Poppins;
+    overscroll-behavior: contain; /*This should intercept pull-to-refresh actions, but does not.. */
+}
+
+h1{
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 6em;
+    margin: 0;
+}
+
+h2 {
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 2.5em;
+    color: #011c44;
+}
+
+h3{
+    font-size: 3vw;
+    color: #011c44;
+}
+
+p {
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 3.8vw;
+    line-height: 3.8vw;
+}
+
+/*********************************************/
+/***                CONTENT                ***/
+/*********************************************/
+
+#wrapper{
+    height: 100%;
+    grid-template-rows: 9fr 1fr;
+    display: grid;
+}
+
+#main-content {
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr 6fr;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    align-items: end;
+
+}
+
+#header{
+    position: relative;
+    width: 95%;
+    margin: 0 auto;
+    height: 100%;
+    border-bottom: solid 8px #3C8BFF;
+    display: flex;
+    align-items: end;
+}
+
+#header h1{
+    color: #3C8BFF;
+}
+
+/*********************************************/
+/***            CONTENT-WRAPPER            ***/
+/*********************************************/
+
+#content-wrapper{
+    display: grid;
+    grid-template-rows: 1fr;
+    height: 100%;
+    align-items: center;
+}
+
+/*********************************************/
+/***              HOME/TASKS               ***/
+/*********************************************/
+#home{
+    height: 100%;
+    visibility: visible;
+    display: inline-block;
+}
+
+#task-content{
+    height: 100%;
+    display: grid;
+    align-content: center;
+    grid-gap: 2em;
+}
+
+#task-inner {
+    width: 95%;
+    height: auto;
+    min-height: 20vh;
+    border-radius: 20px;
+    border: 0.6em #0647a4 solid;
+    margin: 0 auto;
+
+}
+
+#task-inner p{
+    padding: 1em;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 2.2em;
+    line-height: 1.5em;
+}
+#task-inner h2{
+    padding: 1em;
+}
+
+#task-inner-buttons {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.content-button {
+    position: relative;
+    width: 80%;
+    background-color: #0647a4;
+    font-weight: 300;
+    font-size: 2.5em;
+    letter-spacing: 2pt;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    height: 5vh;
+}
+
+.content-button:active {
+    background-color: #011c44;
+}
+
+#task-continue {
+    justify-self: right;
+    right: 1vw;
+    visibility: hidden;
+}
+
+#task-back {
+    justify-self: left;
+    left: 1vw;
+    visibility: hidden;
+}
+
+#task-abort {
+    width: 66%;
+    margin: 0 auto;
+    visibility: hidden;
+    background-color: #953347;
+}
+
+/*********************************************/
+/***                OTHERS                 ***/
+/*********************************************/
+.other-content {
+    padding-top: 2vh;
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.other-content h2 {
+    font-size: 4em;
+}
+
+.other-content p {
+    line-height: 1.4em;
+}
+
+#friends {
+    height: 100%;
+    display: none;
+}
+
+#profile {
+    height: 100%;
+    display: none;
+}
+
+#notifications {
+    height: 100%;
+    display: none;
+}
+
+/*********************************************/
+/***                MENU                   ***/
+/*********************************************/
+
+#menu{
+    position: relative;
+    display: none;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100vw;
+}
+
+#menu-content {
+    display: grid;
+    overflow: scroll;
+    width: 100vw;
+    height: 100%;
+}
+
+/*********************************************/
+/***               BOTTOM-NAV              ***/
+/*********************************************/
+.footer{
+    position: relative;
+    height: 100%;
+    width: 95%;
+    margin: 0 auto;
+    border-top: solid 8px #3C8BFF;
+}
+
+.footer-nav {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.footer-nav-col {
+    max-height: 100%;
+    display: grid;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.footer-nav-col p{
+    font-size: 1.6em;
+    text-align: center;
+    color: #3C8BFF;
+}
+
+.footer-nav-button {
+    width: 9.5vw;
+    height: 9.5vw;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+.footer-nav-button img {
+    width: 8vw;
+}
+
+/* Checkmark */
+
+.checkmark {
+    height: 7vw;
+    width: 7vw;
+    border-radius: 5vh;
+    background: #3C8BFF;
+    align-self: center;
+}
+.checkmark::after, .checkmark::before {
+    content: ' ';
+    position: relative;
+    display: inline-block;
+    width: 8px;
+    background: #fff;
+}
+
+.checkmark::after {
+    height: 3vw;
+    top: 2vw;
+    left: 3vw;
+    transform: rotate(45deg);
+}
+
+.checkmark::before {
+    height: 2vw;
+    top: 2vw;
+    left: 2.5vw;
+    transform: rotate(-45deg);
+}
+
+/* No JS */
+.no-js{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #3C8BFF;
+    overflow: hidden;
+    z-index: 999;
+}
+
+.no-js p{
+    padding: 5vw;
+    color: #ffffff;
+    font-size: 4em;
+    font-weight: 400;
+}
+
+
+/* loading spinner */
+#loadingOverlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    grid-template-rows: 3fr 1fr;
+}
+
+#loadingOverlay p{
+    position: absolute;
+    bottom: 30%;
+    font-size: 2em;
+    text-align: center;
+    width: 80%;
+    padding-left: 10%;
+}
+
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 12vw;
+    height: 12vw;
+    right: 42%;
+    border: 1em solid #cef;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #cef transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#deadEndContainer {
+    position: absolute;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    z-index: 999;
+    background: rgba(255,255,255,0.8);
+}
+
+#deadEndContent{
+    height: fit-content;
+    width: 80%;
+    margin: 20vh auto;
+    padding-bottom: 10%;
+    border-radius: 20px;
+    border: solid 8px #3C8BFF;
+    background: #ffffff;
+}
+
+.deadEndInner{
+    width: 90%;
+    height: 80%;
+    margin: 20% auto 0;
+}
+
+.deadEndInner h3{
+    font-size: 3em;
+    line-height: 1.2em;
+}
+
+.deadEndInner p{
+    line-height: 1.4em;
+}
+
+#deadEndCloseButton {
+    position: absolute;
+    right: 15vw;
+    top: 22.5vh;
+    width: 8vw;
+    height: 8vw;
+    opacity: 1;
+}
+
+#deadEndCloseButton:before, #deadEndCloseButton:after {
+    position: absolute;
+    left: 4vw;
+    content: ' ';
+    height: 8vw;
+    width: 8px;
+    background-color: #011c44;
+}
+#deadEndCloseButton:after {
+    transform: rotate(45deg);
+}
+
+#deadEndCloseButton:before {
+    transform: rotate(-45deg);
+}
