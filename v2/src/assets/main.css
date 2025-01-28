@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --bg-color:white;
+  --primary-color: #0647A4;
+  --secondary-color: #628BFD;
+  --light-color: #A4A4A4;
+  --dark-color: #011c44;
+  --subtle-color: #747474;
+  --light-blue: #becfff;
+  --warning-red: #dc445d;
+  --warning-yellow: #f9df88;
+
+  --profile-red: #EF9A9A;
+  --profile-orange: #FFCC80;
+  --profile-yellow: #FFF59D;
+  --profile-lime: #F0F4C3;
+  --profile-green: #A5D6A7;
+}
+
+html {
+  height: 100%;  
+  font-size: calc(var(--vh, 14px) * 2);
+}
+
+
+/* Extra small devices (phones, 600px and down)
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 14px;
+  }
+} */
+
+/* Small devices (portrait tablets and large phones, 600px and up) 
+@media only screen and (min-width: 600px) {
+  html {
+    font-size: 14px;
+  }
+}*/
+
+/* Medium devices (landscape tablets, 768px and up) 
+@media only screen and (min-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+}*/
+
+/* Large devices (laptops/desktops, 992px and up) 
+@media only screen and (min-width: 992px) {
+  html {
+    font-size: 15px;
+  }
+}*/
+
+/* Extra large devices (large laptops and desktops, 1200px and up) 
+@media only screen and (min-width: 1200px) {
+  html {
+    font-size: 20px;
+  }
+}*/
+
+
+body {
+  height: 100%;
+  width: 100vw;
+  font-family: 'Poppins';
+  overscroll-behavior: contain; /*This should intercept pull-to-refresh actions, but does not.. */
+}
+
+
+*, html, body {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent; /* For WebKit browsers (Safari, Chrome) */
+  appearance: radio;
+  user-select: none;
+}
+
+html, body {
+  height: calc(var(--vh, 1vh) * 100);
+  width: 100%;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+}
+
+h1{
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 3rem;
+  line-height: 3.5rem;
+  margin: 0;
+  color: var(--secondary-color);
+}
+
+h2 {
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 2rem;
+  color: var(--dark-color);
+  margin: 0;
+}
+
+h3{
+  font-size: 1.5rem;
+  color: var(--subtle-color);
+  margin: 0.5rem;
+  font-weight: 600;
+}
+
+p {
+  font-family: Poppins;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: var(--dark-color);
+}
+
+em {
+  font-style: normal;
+  font-weight: 600;
+}
+
+button {
+  width: 100%;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: background-color 0.5s ease;
+}
+
+label {
+  color: var(--dark-color);
+}
+
+
+textarea {
+  resize: none;
+}
+
+select {
+  appearance: menulist-button !important;
+  -moz-appearance: menulist-button !important;
+  -webkit-appearance: menulist-button !important;
+}
+
+select:hover {
+  cursor: pointer;
+}
+
+svg {
+  pointer-events: none;
+}
+/*********************************************/
+/***                CONTENT                ***/
+/*********************************************/
+
+.no-padding {
+  padding: 0rem;
+}
+
+.left-right-padding {
+  padding: 0 1rem;
+}
+
+.top-bottom-padding {
+  padding: 1rem 0;
+}
+
+.full-padding {
+  padding: 1rem;
+}
+
+.bottom-buttons-page {
+  display: grid;
+  overflow: hidden;
+  width: 100%;
+}
+
+.bottom-buttons-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  row-gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.scroll-style {
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scroll-style::-webkit-scrollbar {
+  display: none;
+}
+
+.required-asterix {
+  color: var(--warning-red) !important;
+}
