@@ -3,13 +3,13 @@ import { getDatabase, set, ref, get } from "firebase/database";
 import type { StudyData } from './interface';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCuB6c_YRaF2zLVlO4zNImDv_rIiGPqipU",
-  authDomain: "sns-study-dbff0.firebaseapp.com",
-  databaseURL: "https://sns-study-dbff0-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "sns-study-dbff0",
-  storageBucket: "sns-study-dbff0.firebasestorage.app",
-  messagingSenderId: "193647151877",
-  appId: "1:193647151877:web:30848f73305a39f7e7c56c"
+  apiKey: "your-api-key",
+  authDomain: "your-auth-domain",
+  databaseURL: "your-database-url",
+  projectId: "your-project-id",
+  storageBucket: "your-storage-bucket",
+  messagingSenderId: "your-messaging-sender-id",
+  appId: "your-app-id"
 };
 
 
